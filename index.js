@@ -36,6 +36,11 @@ client.connect(err => {
       });
   });
 
+
+  app.get('/', (req , res) =>{
+    res.send('bd server is working in backend')
+  });
+
   app.post('/productsByKeys', (req, res) => {
     const productKeys = req.body
     console.log(productKeys);
